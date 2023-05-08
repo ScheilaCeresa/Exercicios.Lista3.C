@@ -1,0 +1,52 @@
+#include <iostream>
+
+using namespace std;
+
+/*A 3NET decidiu dar a seus funcionários uma gratificação de Páscoa.Para cada empregado da empresa tem - se
+nome, número de horas extras trabalhadas e número de faltas. Para calcular o prêmio, subtrai-se dois terços das
+horas que o empregado não trabalhou de suas horas extras e atribui-se a gratificação segundo a tabela:
+ht = horas extras - 2/3 * faltas Gratificação
+ht > 40 horas 1000,00
+30 < ht ≤ 40 800,00
+20 < ht ≤ 30 600,00
+10 < ht ≤ 20 400,00
+ht ≤ 10 200,00
+Faça um algoritmo que leia as informações de um funcionário e calcule a sua gratificação.*/
+
+int main()
+{
+    string nome;
+    float num_he, num_f, ht, grat;
+
+    cout << "Informe o nome do funcionario: ";
+    cin >> nome;
+
+    cout << "Informe o numero de horas extras: ";
+    cin >> num_he;
+    cout << "Informe o numero de faltas: ";
+    cin >> num_f;
+
+    ht = num_he - (2/3) * num_f;
+
+    if (ht > 40 ){
+       grat = 1000;
+    }
+    else
+        if (ht > 30) {
+            grat = 800;
+        }
+        else
+            if (ht > 20) {
+                grat = 600;
+            }
+            else
+                if (ht > 10) {
+                    grat = 400;
+                }
+                else
+                    grat = 200;
+
+            cout << "Horas trabalhadas: "<<ht<<endl;
+            cout << "Bonus de gratificacao foi de R$ "<<grat<<". Para o funcionario "<<nome;
+    return 0;
+}

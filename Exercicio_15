@@ -1,0 +1,45 @@
+#include <iostream>
+
+/*Faça um algoritmo leia um caracter indicando uma opção:
+ se opção = ‘T’ ⇒ calcular a área de um triângulo de base b e altura h
+ se opção = ‘Q’ ⇒ calcular a área de um quadrado de lado l
+ se opção = ‘R’ ⇒ calcular a área de um retângulo de base b e altura h*/
+
+using namespace std;
+
+int main()
+{
+    char opcao;
+    float base, altura, lado, area;
+
+    cout << "se opcao = T = calcular a area de um triangulo de base b e altura h. "<<endl;
+    cout << "se opcao = Q = calcular a area de um quadrado de lado l. "<<endl;
+    cout << "se opcao = R = calcular a area de um retangulo de base b e altura h. "<<endl;
+    cout << "Informe uma das opcoes acima: ";
+    cin.get (opcao);
+
+    switch (toupper(opcao)) {
+
+    case 'T':
+        cout << "Informe a base e a altura do triangulo: ";
+        cin >>base>>altura;
+        area = base*altura;
+        break;
+
+    case 'Q':
+        cout << "Informe o lado quadrado: ";
+        cin >> lado;
+        area = lado*lado;
+        break;
+    case 'R':
+        cout << "Informe a base e a altura de um retangulo: ";
+        cin >>base>>altura;
+        area = base*altura;
+        break;
+    default:
+        cout << "Opcao invalida. ";
+
+    }
+    cout << "Area de "<<opcao<<" eh de: "<<area;
+    return 0;
+}

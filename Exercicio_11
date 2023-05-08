@@ -1,0 +1,44 @@
+#include <iostream>
+
+/*Escreva um algoritmo que leia a hora de início de um jogo e a hora final do jogo(considerando apenas horas
+inteiras) e calcule a duração do jogo em horas, sabendo-se que o tempo máximo de duração do jogo é de 24 horas
+e que o jogo pode iniciar em um dia e terminar no dia seguinte.*/
+using namespace std;
+
+int main()
+{
+   int hora_i, hora_f, tempo;
+
+   cout << "Informe o horario que o jogo comecou: ";
+   cin >> hora_i;
+   cout << "Informe o horario que o jogo acabou: ";
+   cin >> hora_f;
+
+   if (hora_i > 24 || hora_f > 24) {
+        cout << "Dia tem 24 horas. ";
+   }
+   else
+
+    if (hora_f < hora_i) {
+      tempo = (24 - hora_i) + hora_f;
+      if (tempo > 24) {
+         cout << "O tempo do jogo excedido. ";
+      }
+      else
+         cout << "O tempo do jogo foi de "<<tempo<<" horas";
+    }
+    else
+      if (hora_f > hora_i) {
+         tempo = hora_f - hora_i;
+         if (tempo > 24) {
+            cout << "O tempo do jogo excedido. ";
+         }
+         else
+            cout << "O tempo do jogo foi de "<<tempo<<" horas";
+
+      }
+      else
+         cout << "O tempo do jogo foi de zero horas";
+
+    return 0;
+}

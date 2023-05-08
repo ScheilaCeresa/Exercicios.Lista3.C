@@ -1,0 +1,34 @@
+#include <iostream>
+
+/*O departamento do meio ambiente mantém 3 listas(lista A, lista B e lista C) de indústrias conhecidas por serem
+altamente poluentes da atmosfera. Os resultados de várias medidas são combinados para formar o que é chamado
+de “índice de poluição”. Isso é controlado regularmente. Normalmente os valores variam entre 0.05 e 0.25. Se o
+valor atingir 0.30, as indústrias da lista A serão chamadas a suspender as operações até que os valores retornem
+ao intervalo normal. Se o índice atingir 0.40, as indústrias da lista B serão notificadas também. Se o índice exceder
+0.50, indústrias de todas as 3 listas serão avisadas para suspenderem as atividades. Faça um algoritmo para ler o
+índice de poluição e indicar as notificações apropriadas.*/
+
+using namespace std;
+
+int main()
+{
+   float lista_a, lista_b, lista_c, ind_p;
+
+   cout << "Informe o indice de poluicao: ";
+   cin >> ind_p;
+
+   if (ind_p > 0.05 && ind_p < 0.25) {
+        cout << "Indice normal. ";
+   }
+   else
+        if (ind_p >= 0.30) {
+            cout << "Notificamos que as industrias da lista A sao chamadas a suspender as operações ate que os valores retornem ao normal. ";
+        }
+        else
+            if (ind_p >= 0.40) {
+            cout << "Notificamos que as industrias da lista A e lista B sao chamadas a suspender as operações ate que os valores retornem ao normal. ";
+            }
+            else
+                cout << "Notificamos que as industrias da lista A, B e C sao chamadas a suspender as operações ate que os valores retornem ao normal. ";
+    return 0;
+}

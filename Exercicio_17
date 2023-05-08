@@ -1,0 +1,55 @@
+#include <iostream>
+
+/*O cardápio de uma lanchonete é dado pela tabela abaixo
+Código Produtos Preço Unitário (r$)
+100 Cachorro quente + refrigerante 13,00
+101 Misto quente + refrigerante 12,50
+102 Misto frio + refrigerante 12,00
+103 Queijo quente + refrigerante 12,25
+Durante essa semana, a lanchonete está em promoção: para qualquer lanche de um mesmo tipo adquirido, leve 5
+e pague 4. Faça um algoritmo que leia o código do pedido e o número de itens de um mesmo tipo a ser adquirido
+por um consumidor e escreva o valor a pagar. Caso o código do pedido não seja válido, escreva apenas uma
+mensagem de erro. O consumidor só pode pedir itens de um mesmo tipo.  */
+
+using namespace std;
+
+int main()
+{
+    int cod, quant;
+    float valor, valor_d;
+
+    cout << "(100) Cachorro quente + refrigerante 13,00"<<endl;
+    cout << "(101) Misto quente + refrigerante 12,50"<<endl;
+    cout << "(102) Misto frio + refrigerante 12,00"<<endl;
+    cout << "(103) Queijo quente + refrigerante 12,25"<<endl;
+
+    cout << "Informe o codigo do pedido: ";
+    cin >> cod;
+    cout << "Informe a quantidade: ";
+    cin >> quant;
+
+    switch (cod) {
+
+    case 100:
+        cod = 13.00;
+        break;
+    case 101:
+        cod = 12.50;
+        break;
+    case 102:
+        cod = 12.00;
+        break;
+    case 103:
+        cod = 12.25;
+        break;
+    default:
+        cout << "Codigo invalido. ";
+    }
+
+        valor_d  = quant/5;
+        valor = cod*(quant-valor_d);
+
+    cout << "Valor final R$ "<<valor;
+
+    return 0;
+}

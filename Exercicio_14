@@ -1,0 +1,82 @@
+#include <iostream>
+
+/*. Uma lanchonete fast food apresenta a seguinte relação de produtos:
+Código Descrição Preço (r$)
+1 Hamburger 14,50 2 Chessburger 15,50 3 Cachorro Quente 10,00 4 Sanduíche Natural 13,50
+5 Refrigerante 5,00 6 Suco de Laranja 6,00
+7 Milk shake 10,50 8 Sundae 13,00 9 Casquinha 10,00
+Cada cliente sempre deve pedir um item de alimentação (01 a 04), uma bebida (05 ou 06) e uma sobremesa (07 a
+09). Escreva um algoritmo que leia os 3 códigos do pedido do cliente e informe a descrição/preço de cada item e o
+preço final a pagar. Caso ocorra algum problema (código inválido ou repetição de algum item), exibir apenas uma
+mensagem de erro.*/
+
+using namespace std;
+
+int main()
+{
+    int cod_c, cod_b, cod_s;
+    float valor, valor_c, valor_b, valor_s;
+
+    cout << "(1) Hamburger 14,50"<<endl;
+    cout << "(2) Chessburger 15,50"<<endl;
+    cout << "(3) Cachorro Quente 10,00"<<endl;
+    cout << "(4) Sanduíche Natural 13,50"<<endl;
+    cout << "(5) Refrigerante 5,00"<<endl;
+    cout << "(6) Suco de Laranja 6,00"<<endl;
+    cout << "(7) Milk shake 10,50"<<endl;
+    cout << "(8) Sundae 13,00"<<endl;
+    cout << "(9) Casquinha 10,00"<<endl;
+    cout << "Indorme o codigo da comida: ";
+    cin >> cod_c;
+    cout << "Informe o codigo da bedida: ";
+    cin >> cod_b;
+    cout << "Informe o codigo da sobremesa: ";
+    cin >> cod_s;
+
+
+    switch (cod_c) {
+
+    case 1:
+        valor_c = 14.50;
+        break;
+    case 2:
+        valor_c = 15.50;
+        break;
+    case 3:
+        valor_c = 10.00;
+        break;
+    case 4:
+        valor_c = 13.50;
+        break;
+    default:
+        cout << "Codigo invalido. "<<endl;
+    }
+    switch (cod_b) {
+
+    case 5:
+        valor_b = 5.00;
+        break;
+    case 6:
+        valor_b = 6.00;
+        break;
+    default:
+        cout << "Codigo invalido. "<<endl;
+    }
+    switch (cod_s) {
+
+    case 7:
+        valor_s = 10.50;
+        break;
+    case 8:
+        valor_s = 13.00;
+        break;
+    case 9:
+        valor_s = 10.00;
+        break;
+    default:
+        cout << "Codigo invalido. ";
+    }
+    valor = valor_c+valor_b+valor_s;
+    cout << "Valor total da compra R$ "<<valor;
+    return 0;
+}

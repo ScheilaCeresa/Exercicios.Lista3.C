@@ -1,0 +1,33 @@
+#include <iostream>
+
+/* Faça um algoritmo que leia o sexo e altura de uma pessoa e calcule seu peso ideal, considerando que para
+homens o peso ideal é igual a (72,7 * altura) - 58 e para mulheres o peso ideal é igual a (62.1 * altura) - 44.7. */
+
+using namespace std;
+
+int main()
+{
+   char sexo;
+   float altura, peso_i;
+
+   cout << "Informe seu sexo biologico: ";
+   cin.get (sexo);
+   cout << "Informe sua altura: ";
+   cin >> altura;
+
+   switch (toupper(sexo)) {
+
+   case 'F':
+       peso_i = (62.1*altura) - 44.7;
+       break;
+    case 'M':
+        peso_i = (72.7*altura) - 58;
+        break;
+    default:
+        cout << "Erro na leitura. ";
+
+   }
+
+   cout << "Seu peso ideal: "<<peso_i;
+    return 0;
+}
