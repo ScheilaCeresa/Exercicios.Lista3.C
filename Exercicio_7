@@ -1,0 +1,36 @@
+#include <iostream>
+
+using namespace std;
+
+/*Faça um algoritmo que leia 3 valores x, y, z, e verifique se podem ser os comprimentos dos lados de um triângulo.
+Em caso afirmativo, verifique se é ‘triângulo equilátero’, ‘triângulo isósceles’ ou ‘triângulo escaleno’. Em caso
+negativo, escreva uma mensagem: ‘os valores lidos não formam um triângulo’. Considere que:
+• o comprimento de cada lado de um triângulo é menor que a soma dos comprimentos dos outros lados
+• um triângulo equilátero tem três lados iguais
+• um triângulo isósceles tem dois lados iguais e um diferente
+• um triângulo escaleno tem três lados diferentes.*/
+
+int main()
+{
+    int a, b, c;
+    cout << "Informe os tres lados de um triangulo: ";
+    cin >> a;
+    cin >> b;
+    cin >> c;
+
+    if (a < b+c and b < a+c and c < a+b) {
+        cout << "Os valores lidos formam um triungulo. "<<endl;;
+        if (a==b and b==c) {
+            cout << "E forma um triangulo equilatero. ";
+        }
+        else
+            if (a!=b and b!= c) {
+                cout << "E forma um triangulo escaleno. ";
+            }
+            else
+                cout << "E forma um triangulo isosceles. ";
+    }
+    else
+        cout << "Os valores nao formam um triangulo. ";
+    return 0;
+}

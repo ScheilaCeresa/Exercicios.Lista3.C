@@ -1,0 +1,26 @@
+#include <iostream>
+
+using namespace std;
+
+/*Escreva um algoritmo que leia 2 valores inteiros, a e b, e escreve-os juntamente com a mensagem ‘são múltiplos’
+ou ‘não são múltiplos’, conforme o caso. EXEMPLO:
+a b Mensagem
+3 4 Não são múltiplos
+2 6 São múltiplos
+6 2 São múltiplos*/
+
+int main()
+{
+    int a, b;
+    cout << "Informe dois valores: ";
+    cin >> a;
+    cin >> b;
+
+    if (a % b==0 or b % a==0) {
+        cout << "Sao multiplos. ";
+    }
+    else
+        cout << "Nao sao multiplos";
+
+    return 0;
+}

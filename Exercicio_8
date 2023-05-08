@@ -1,0 +1,38 @@
+#include <iostream>
+# include <cmath>
+
+using namespace std;
+
+ /*Faça um algoritmo para calcular as raízes reais de uma equação quadrática:
+  ax2 + bx + c = 0. Uma equação
+quadrática só tem raiz reais se (b2
+ - 4ac) for maior ou igual a zero. O algoritmo deve ser capaz de tratar os casos
+em que há duas raízes distintas, uma raiz real ou nenhuma raiz. */
+
+int main()
+{
+    float a, b, c, eqp, eqn, delta;
+        cout << "Informe os valores da equacao: ";
+        cin >> a;
+        cin >> b;
+        cin >> c;
+
+        delta = pow(b,2)-(4*a*c);
+
+        if (delta < 0 ) {
+            cout << "Nao ha raiz. ";
+        }
+        else
+            if (delta == 0) {
+                eqp = -b / (2*a);
+                cout << "So ha uma raiz: "<<eqp;
+            }
+            else
+                eqp = -b+sqrt(delta)/(2*a);
+                eqn = -b-sqrt(delta)/(2*a);
+                cout << "Equcao da 1 raiz: "<<eqp<<endl;
+                cout << "Equacao da 2 raiz: "<<eqn<<endl;
+                cout << delta;
+
+    return 0;
+}

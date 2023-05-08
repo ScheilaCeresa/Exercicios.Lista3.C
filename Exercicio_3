@@ -1,0 +1,27 @@
+#include <iostream>
+
+using namespace std;
+
+/*Escreva um algoritmo que leia três valores a, b e c, e calcule e escreva a média ponderada com pesos de 5 para
+o maior dos 3 valores e 2.5 para os outros 2 valores.*/
+
+int main()
+{
+    float a, b, c, media, peso1=5, peso2=2.5, peso3=2.5;
+    cout << "Informe tres valores: ";
+    cin >> a;
+    cin >> b;
+    cin >> c;
+
+    if (a>b and a>=c){
+        media = (a*5+b*2.5+c*2.5)/(5+2.5+2.5);
+
+    } else
+            if (b > c){
+                media = (a*2.5+b*5+c*2.5)/(5+2.5+2.5);
+            } else
+                    media = (a*2.5+b*2.5+c*5)/(5+2.5+2.5);
+
+    cout << "A media: "<<media;
+    return 0;
+}

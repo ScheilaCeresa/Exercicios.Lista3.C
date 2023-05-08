@@ -1,0 +1,36 @@
+#include <iostream>
+
+using namespace std;
+
+/*Escreva um algoritmo que leia 4 números inteiros (opção, n1, n2, n3) e escreve-os da seguinte maneira:
+ se opção = 1 escreva o número n1
+ se opção = 2 escreva o número n2
+se opção = 3 escreva o número n3
+se opção for outro valor qualquer escreva opção inválida. */
+
+int main()
+{
+    int opcao, n1, n2, n3;
+    cout << "Informe tres valores: ";
+    cin >> n1;
+    cin >> n2;
+    cin >> n3;
+    cout << "Informe um valor de 1 a 3: ";
+    cin >> opcao;
+
+    switch (opcao) {
+    case 1:
+        cout << n1;
+        break;
+    case 2:
+        cout << n2;
+        break;
+    case 3:
+        cout << n3;
+        break;
+    default:
+        cout << "Opcao invalida. ";
+    }
+
+    return 0;
+}
